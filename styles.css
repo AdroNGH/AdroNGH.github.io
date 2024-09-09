@@ -1,10 +1,24 @@
+/* Definición de variables */
+:root {
+    --background-color: #1c1c1c;       /* Color de fondo principal */
+    --text-color: #e0e0e0;             /* Color del texto principal */
+    --secondary-bg-color: #282c34;     /* Color de fondo secundario (header y footer) */
+    --card-bg-color: #2c2c2c;          /* Color de fondo de las tarjetas */
+    --border-color: #444;              /* Color de los bordes y separadores */
+    --link-color: #f39c12;             /* Color de los enlaces */
+    --subtitle-text-color: #bbbbbb;    /* Color del texto secundario */
+    --shadow-color: rgba(27, 31, 35, 0.2); /* Color de las sombras */
+}
+
 /* Estilos básicos */
 html, body {
-    height: 100%; /* Asegura que el body ocupe toda la altura */
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 *, *::before, *::after {
@@ -15,27 +29,16 @@ body {
     display: flex;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f6f8fa;
-    color: #24292e;
     line-height: 1.6;
-}
-
-a {
-    color: #0366d6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Estilos del encabezado */
 header {
-    background-color: #24292e;
+    background-color: var(--secondary-bg-color);
     color: white;
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid #d1d5da;
+    border-bottom: 1px solid var(--border-color);
 }
 
 header h1 {
@@ -46,19 +49,30 @@ header h1 {
 header p {
     margin: 10px 0 0 0;
     font-size: 1.2em;
+    color: var(--subtitle-text-color);
+}
+
+/* Estilos de los enlaces */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Estilos de la navegación */
 nav {
-    background-color: #f6f8fa;
+    background-color: var(--background-color);
     padding: 10px 0;
     text-align: center;
-    border-bottom: 1px solid #d1d5da;
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
     margin: 0 15px;
-    color: #0366d6;
+    color: var(--link-color);
     font-weight: 600;
     text-decoration: none;
     font-size: 1.1em;
@@ -73,38 +87,40 @@ section {
     max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
-    flex-grow: 1; /* Hace que la sección principal crezca y ocupe el espacio disponible */
+    flex-grow: 1;
 }
 
 /* Estilos para la sección "Sobre mí" */
 #about {
-    background-color: #ffffff;
+    background-color: var(--card-bg-color);
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(27,31,35,0.12);
-    border: 1px solid #e1e4e8;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    border: 1px solid var(--border-color);
     margin-bottom: 20px;
 }
 
 #about h2 {
     margin-top: 0;
+    color: var(--link-color);
 }
 
 #about p {
     font-size: 1.1em;
+    color: var(--subtitle-text-color);
 }
 
 /* Estilos para los proyectos */
 #projects {
-    background-color: #ffffff;
+    background-color: var(--card-bg-color);
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(27,31,35,0.12);
-    border: 1px solid #e1e4e8;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    border: 1px solid var(--border-color);
 }
 
 .project {
-    border-bottom: 1px solid #e1e4e8;
+    border-bottom: 1px solid var(--border-color);
     padding: 15px 0;
 }
 
@@ -116,25 +132,26 @@ section {
     margin: 0 0 5px;
     font-size: 1.2em;
     font-weight: 600;
+    color: var(--link-color);
 }
 
 .project p {
     margin: 0;
-    color: #586069;
+    color: var(--subtitle-text-color);
     font-size: 1em;
 }
 
 /* Estilos del pie de página */
 footer {
-    background-color: #24292e;
+    background-color: var(--secondary-bg-color);
     color: white;
     text-align: center;
     padding: 20px;
-    position: sticky; /* sticky en lugar de fixed para mantenerlo al pie */
+    position: sticky;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #d1d5da;
-    flex-shrink: 0; /* Evita que el footer colapse si la ventana es pequeña */
+    border-top: 1px solid var(--border-color);
+    flex-shrink: 0;
 }
 
 footer p {
@@ -142,7 +159,7 @@ footer p {
 }
 
 footer a {
-    color: #0366d6;
+    color: var(--link-color);
 }
 
 footer a:hover {
