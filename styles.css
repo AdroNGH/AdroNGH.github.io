@@ -1,11 +1,21 @@
 /* Estilos básicos */
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f6f8fa;
-    color: #24292e;
+    background-color: #333;
+    color: #f6f8fa;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -113,6 +123,8 @@ section {
 
 /* Estilos del pie de página */
 footer {
+    font-style: italic;
+    text-align: center;
     background-color: #24292e;
     color: white;
     text-align: center;
