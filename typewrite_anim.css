@@ -1,0 +1,24 @@
+.typewriter {
+    display: inline-block;
+    font-size: 2em; /* Ajusta el tamaño según tus necesidades */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--link-color); /* Usa el color de enlace para el texto */
+    overflow: hidden; /* Esconde el texto que se está escribiendo */
+    white-space: nowrap; /* Asegura que el texto no se rompa en varias líneas */
+    border-right: .15em solid var(--link-color); /* Simula el cursor de escritura */
+    animation: 
+        typing 3.5s steps(40, end), /* La animación de escribir */
+        blink-caret .75s step-end infinite; /* El parpadeo del cursor */
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from { width: 0; } /* Empieza con el ancho 0 */
+    to { width: 100%; } /* Termina con el ancho completo del texto */
+}
+
+/* Animación de parpadeo del cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent; } /* El cursor no se ve */
+    50% { border-color: var(--link-color); } /* El cursor se muestra */
+}
