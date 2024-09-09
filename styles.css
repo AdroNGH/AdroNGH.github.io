@@ -92,11 +92,11 @@ section {
 
 /* Estilos para la sección "Sobre mí" */
 #about {
-    background-color: var(--card-bg-color);
-    padding: 20px;
+    background-color: transparent;
+    padding: 20px 0;
     border-radius: 6px;
-    box-shadow: 0 1px 3px var(--shadow-color);
-    border: 1px solid var(--border-color);
+    box-shadow: transparent;
+    border: transparent;
     margin-bottom: 20px;
 }
 
