@@ -102,12 +102,12 @@ section {
 
 #about h2 {
     margin-top: 0;
-    color: var(--link-color);
+    color: transparent;
 }
 
 #about p {
     font-size: 1.1em;
-    color: var(--subtitle-text-color);
+    color: transparent;
 }
 
 /* Estilos para los proyectos */
